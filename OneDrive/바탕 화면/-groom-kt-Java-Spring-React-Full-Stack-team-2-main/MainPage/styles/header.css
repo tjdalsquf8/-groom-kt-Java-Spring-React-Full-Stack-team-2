@@ -1,0 +1,171 @@
+.header {
+    height: 110px;
+    flex-direction: column;
+    position: fixed; /**상단 고정**/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.top-section {
+    display: flex;
+    height: 50%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 15%;
+    gap: 30px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.middle-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 600px;
+}
+
+.right-section {
+    display: flex;
+    width: 220px;
+    margin-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    height: 100px;
+}
+
+.search-container {
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 36px;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+}
+
+.search-bar {
+    flex: 1;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-button {
+    height: 100%;
+    width: 64px;
+    background-color: #f8f8f8;
+    border: none;
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.search-button,
+.voice-search-button,
+.notifications-icon-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.notifications-icon-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    bottom: -30px;
+    border-radius: 2px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap; /** 택스트를 한 줄로 만듦**/
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltip {
+    pointer-events: none;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f2f2f2;
+    margin-left: 10px;
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+.create-button {
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    width: 120px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.notifications-icon {
+    height: 24px;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 16px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.recommend-title {
+    height: 32px;
+    border: none;
+    
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
