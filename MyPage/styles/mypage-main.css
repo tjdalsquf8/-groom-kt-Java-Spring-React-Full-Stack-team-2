@@ -56,7 +56,7 @@
 
 .user-action-button {
     background-color: #272727; /* 버튼 고유색 유지 */
-    color: var(--text-primary);
+    color: var(--text-button);
     border: none;
     padding: 8px 16px;
     border-radius: 18px;

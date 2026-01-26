@@ -15,7 +15,7 @@
     z-index: 500; /* 최상위 레벨 */
 
     background-color: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #ddd;
     padding: 0 16px;
 }
 
