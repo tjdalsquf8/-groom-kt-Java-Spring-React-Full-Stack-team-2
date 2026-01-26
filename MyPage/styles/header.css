@@ -46,7 +46,7 @@
 }
 
 .youtube-logo {
-    height: 70px; /* 기존 값 유지 */
+    height: 25px; /* 기존 값 유지 */
     object-fit: contain;
 }
 

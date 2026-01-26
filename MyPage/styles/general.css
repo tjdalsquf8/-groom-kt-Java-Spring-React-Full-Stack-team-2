@@ -8,19 +8,18 @@
     --sidebar-width: 72px;      /* 사이드바 너비 */
 
     /* 색상 팔레트 (Color Palette) */
-    --bg-primary: #181818;      /* 메인 배경색 (body, main) */
-    --bg-secondary: #222222;    /* 헤더 배경색 */
-    --bg-tertiary: #212121;     /* 사이드바 배경색 */
-    --bg-input: #121212;        /* 검색창 배경 */
+    --bg-primary: #f9f9f9;      /* 메인 배경색 (body, main) */
+    --bg-secondary: #f9f9f9;    /* 헤더 배경색 */
+    --bg-tertiary: #f9f9f9;     /* 사이드바 배경색 */
+    --bg-input: #f9f9f9;        /* 검색창 배경 */
     --bg-hover: #383838;        /* 마우스 호버 시 배경 */
     --bg-button: #323232;       /* 버튼 배경 */
     
-    --text-primary: #ffffff;    /* 기본 텍스트 (흰색) */
-    --text-secondary: #aaaaaa;  /* 보조 텍스트 (회색) */
+    --text-primary: #121212;    /* 기본 텍스트 (흰색) */
+    --text-secondary: #121212;  /* 보조 텍스트 (회색) */
     --text-hover: white;        /* 호버 시 텍스트 */
 
     --border-color: #323232;    /* 테두리 색상 */
-    --accent-color: #cc0000;    /* 강조 색상 (알림 등) */
 }
 
 /* 기본 바디 설정 */
