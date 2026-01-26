@@ -1,218 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube</title>
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
-    <link rel="stylesheet" href="styles/video.css">
+    <title>YouTube Premium - 1theK</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="top-section">
-            <div class="left-section">
-                <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-                <img class="youtube-logo" src="icons/youtube-logo.svg">
-            </div>
-            <div class="middle-section">
-                <div class="search-container">
-                    <input class="search-bar" type="text" placeholder="Search">
-                    <button class="search-button">
-                        <img class="search-icon" src="icons/search.svg">
-                        <div class="tooltip">Search</div>
-                    </button>
-                </div>
-                <button class="voice-search-button">
-                    <img class="voice-search-icon" src="icons/voice-search-icon.svg">
-                    <div class="tooltip">Search with your voice</div>
-                </button>
-            </div>
-            <div class="right-section">
-                <button class="create-button">Create</button>
-                <div class="notifications-icon-container">
-                    <img class="notifications-icon" src="icons/notifications.svg">
-                    <div class="tooltip">Notifications</div>
-                </div>
-                <img class="current-user-picture" src="images/avatars/avatar-1.svg">
-            </div>
+    <!-- 헤더 -->
+    <div class="header">
+        <div class="header-left">
+            <div class="menu-icon">☰</div>
+            <div class="logo"> <img src="./headerimg/youtubelogo.png" alt="YouTube Logo" class="youtube-logo"> </div>
         </div>
-        <div class="bottom-section">
-            <button class="recommend-title">All</button>
-            <button class="recommend-title">Music</button>
-            <button class="recommend-title">News</button>
-            <button class="recommend-title">Mixes</button>
-            <button class="recommend-title">Computer Science</button>
-            <button class="recommend-title">Goorm</button>
+        <div class="header-center">
+            <div class="search-container"> <input type="text" class="search-input" placeholder="검색"> <button class="search-button">🔍</button> </div> <button class="voice-button"> <img src="./headerimg/mikeicon.png" alt="voice" class="icon-img"> </button>
         </div>
-        
-    </header>
-    <nav class="sidebar">
-        <div class="sidebar-elements">
-            <img src="icons/home.svg">
-            <div>Home</div>
+        <div class="header-right"> <button class="create-button">➕ 만들기</button>
+            <div class="icon-button notification-badge"> <img src="./headerimg/notificationicon.png" alt="notification" class="icon-img"> <span class="badge">3</span> </div>
+            <div class="user-avatar">성민</div>
         </div>
-        <div class="sidebar-elements">
-            <img class="shorts-icon" src="icons/shorts.png">
-            <div>Shorts</div>
+    </div> <!-- 사이드바 -->
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 4.33l7 6.12V20h-6v-6H11v6H5v-9.55l7-6.12M12 2L2 11h3v10h6v-6h2v6h6V11h3L12 2z" /> </svg> <span>홈</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86l-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z" /> </svg> <span>Shorts</span> </div>
         </div>
-        <div class="sidebar-elements">
-            <img src="icons/subscriptions.svg">
-            <div>Subscriptions</div>
+        <div class="sidebar-section">
+            <div class="sidebar-title"> <span>구독</span> <span class="arrow">›</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/SBS.jpg" alt="SBS" class="sidebar-item-thumbnail"> <span>SBS 뉴스</span> <span class="live-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/SBSCATCH.jpg" alt="SBSCATCH" class="sidebar-item-thumbnail"> <span>SBSCATCH</span> <span class="live-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/shortbox.jpg" alt="shortbox" class="sidebar-item-thumbnail"> <span>숏박스</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/IU.jpg" alt="IU" class="sidebar-item-thumbnail"> <span>아이유</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/IVE.jpg" alt="IVE" class="sidebar-item-thumbnail"> <span>아이브</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/NMIXX.jpg" alt="NMIXX" class="sidebar-item-thumbnail"> <span>NMIXX</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/HYBE.jpg" alt="HYBE" class="sidebar-item-thumbnail"> <span>HYBE</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/DEEP.jpg" alt="DEEP" class="sidebar-item-thumbnail"> <span>딥 Deep</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/JOCODING.jpg" alt="조코딩" class="sidebar-item-thumbnail"> <span>조코딩</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/APPLE.jpg" alt="코딩애플" class="sidebar-item-thumbnail"> <span>코딩애플</span> <span class="new-indicator">●</span> </div>
+            <div class="sidebar-item show-more"> <span>▼ 더보기</span> </div>
         </div>
-        <div class="sidebar-elements">
-            <img src="images/avatars/avatar-1.svg">
-            <div>You</div>
+        <div class="sidebar-section">
+            <div class="sidebar-item"> <span>내 페이지 ›</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M11.9 3.75c-4.55 0-8.23 3.7-8.23 8.25H.92l3.57 3.57.04.13 3.7-3.7H5.5c0-3.54 2.87-6.42 6.42-6.42 3.54 0 6.4 2.88 6.4 6.42s-2.86 6.42-6.4 6.42c-1.78 0-3.38-.73-4.54-1.9l-1.3 1.3c1.5 1.5 3.55 2.43 5.83 2.43 4.58 0 8.28-3.7 8.28-8.25 0-4.56-3.7-8.25-8.27-8.25z" /> </svg> <span>기록</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M22 13h-4v4h-2v-4h-4v-2h4V7h2v4h4v2zm-8-6H2v1h12V7zM2 12h8v-1H2v1zm0 4h8v-1H2v1z" /> </svg> <span>재생목록</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M14.97 16.95L10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM22 12c0 5.51-4.49 10-10 10S2 17.51 2 12h1c0 4.96 4.04 9 9 9s9-4.04 9-9-4.04-9-9-9C8.81 3 5.92 4.64 4.28 7.38c-.11.18-.22.37-.31.56L3.94 8H8v1H1.96V3h1v4.74c.04-.09.07-.17.11-.25.11-.22.23-.42.35-.63C5.22 3.86 8.51 2 12 2c5.51 0 10 4.49 10 10z" /> </svg> <span>나중에 볼 동영상</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18.77 11h-4.23l1.52-4.94C16.38 5.03 15.54 4 14.38 4c-.58 0-1.14.24-1.52.65L7 11H3v10h4h1h9.43c1.06 0 1.98-.67 2.19-1.61l1.34-6C21.23 12.15 20.18 11 18.77 11zM7 20H4v-8h3V20zM19.98 13.17l-1.34 6C18.54 19.65 18.03 20 17.43 20H8v-8.61l5.6-6.06C13.79 5.12 14.08 5 14.38 5c.26 0 .5.11.63.3.07.1.15.26.09.47l-1.52 4.94L13.18 12h1.35h4.23c.41 0 .8.17 1.03.46.12.15.25.35.18.71z" /> </svg> <span>좋아요 표시한 동영상</span> </div>
+        </div> <!-- 탐색 -->
+        <div class="sidebar-section">
+            <div class="sidebar-title">탐색</div>
+            <div class="sidebar-item active"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 3l4 4h-3v7h-2V7H8l4-4zM5 18h14v2H5z" /> </svg> <span>쇼핑</span> </div>
+            <div class="sidebar-item active"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 3v10.55a4 4 0 1 0 2 3.45V7h4V3h-6z" /> </svg> <span>음악</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M4 4h16v12H4zM2 20h20v-2H2z" /> </svg> <span>영화</span> </div>
+            <div class="sidebar-item"> <span>▼ 더보기</span> </div>
+        </div> <!-- YouTube 더보기 -->
+        <div class="sidebar-section">
+            <div class="sidebar-title">YouTube 더보기</div>
+            <div class="sidebar-item"> <img src="./sidebarimg/studio.png" class="sidebar-item-thumbnail"> <span>YouTube 스튜디오</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/music.png" class="sidebar-item-thumbnail"> <span>YouTube Music</span> </div>
+            <div class="sidebar-item"> <img src="./sidebarimg/kid.png" class="sidebar-item-thumbnail"> <span>YouTube Kids</span> </div>
+        </div> <!-- 설정 / 고객센터 -->
+        <div class="sidebar-section">
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19.14 12.94a7.43 7.43 0 0 0 .05-.94 7.43 7.43 0 0 0-.05-.94l2.03-1.58-1.92-3.32-2.39.96a7.56 7.56 0 0 0-1.63-.94l-.36-2.54h-3.84l-.36 2.54a7.56 7.56 0 0 0-1.63.94l-2.39-.96-1.92 3.32 2.03 1.58a7.43 7.43 0 0 0-.05.94 7.43 7.43 0 0 0 .05.94l-2.03 1.58 1.92 3.32 2.39-.96c.5.38 1.05.7 1.63.94l.36 2.54h3.84l.36-2.54c.58-.24 1.13-.56 1.63-.94l2.39.96 1.92-3.32-2.03-1.58z" /> </svg> <span>설정</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M4 4h16v16H4z" /> </svg> <span>신고 기록</span> </div>
+            <div class="sidebar-item"> <svg class="sidebar-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /> </svg> <span>고객센터</span> </div>
         </div>
-    </nav>
-    <main>
-        <section class="video-grid">
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-1.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">은하</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">1.5K views &#183; 8 months ago</p>
-                    </div>
-                </div>
+    </div> <!-- 메인 컨텐츠 -->
+    <div class="main-content">
+        <!-- 배너 -->
+        <div class="banner"> <img src="./headerimg/channelbanner.jpg" alt="Channel Banner" class="banner-background">
+            <div class="banner-content"> </div>
+            <div class="banner-text-right">
+                <div class="banner-title">K-POP</div>
+                <div class="banner-subtitle">WONDERLAND</div>
             </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-2.jpeg">
-                    <div class="video-time">5:17</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">일상 브이로그</p>
-                        <p class="video-author">구름</p>
-                        <p class="video-stats">1M views &#183; 3 days ago</p>
-                    </div>
-                </div>
+        </div> <!-- 채널 정보 -->
+        <div class="channel-header"> <img src="./mainimg/profile.png" alt="Channel Avatar" class="channel-avatar">
+            <div class="channel-info">
+                <div class="channel-name"> 1theK (원더케이) <img src="./headerimg/verified.png" alt="Verified" class="verified-badge"> </div>
+                <div class="channel-handle">@1theK · 구독자 2510만명 · 동영상 2.2만개</div>
+                <div class="channel-description">"K-pop Wonderland" 1theK ...더보기</div> <a href="#" class="channel-link">youtube.com/@1theKLive 외 링크 5개</a> <button class="subscribe-button"> 🔔 구독중 ▼ </button>
             </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-3.jpeg">
-                    <div class="video-time">1:02</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">보라카이</p>
-                        <p class="video-author">알리</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
+        </div> <!-- 탭 -->
+        <div class="tabs">
+            <div class="tab active">홈</div>
+            <div class="tab">동영상</div>
+            <div class="tab">Shorts</div>
+            <div class="tab">라이브</div>
+            <div class="tab">재생목록</div>
+            <div class="tab">게시물</div>
+            <div class="tab">🔍</div>
+        </div> <!-- 비디오 -->
+        <div class="video-item">
+            <div class="video-thumbnail"> <img src="./mainimg/Video.png" alt="Video Thumbnail" class="video-thumb-image">
+                <div class="video-badge">OFFICIAL</div>
+                <div class="video-duration">♪ 4:10</div>
             </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-4.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">노르웨이</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
+            <div class="video-info">
+                <div class="video-title">[MV] Jeong Hyo Bean(정효빈) _ Sail(창해)</div>
+                <div class="video-metadata"> <span>1theK (원더케이)</span> <span>✓</span> <span>조회수 2.9천회</span> <span>•</span> <span>22시간 전</span> </div>
+                <div class="video-description"> [MV] Jeong Hyo Bean(정효빈) _ Sail(창해) K-POP Wonderland, 1theK K-POP의 모든 즐거움을 1theK(원더케이)에서 만나보세요! :) Welcome to the official YouTube channel of... </div>
             </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-5.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">뉴욕</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
+            <div class="more-button">⋮</div>
+        </div> <!-- 플레이리스트 -->
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <div class="playlist-title">1theK HOT CHOICE</div> <button class="play-all-button">▶ 모두 재생</button>
             </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-6.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">런던</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-7.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">헝가리</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-8.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">섬</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-preview">
-                <div class="thumbnail-row">
-                    <img class="thumbnail" src="images/thumbnails/thumbnail-8.jpeg">
-                    <div class="video-time">3:22</div>
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-picture">
-                        <img class="profile-picture" src="images/avatars/avatar-1.svg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">섬</p>
-                        <p class="video-author">Kim</p>
-                        <p class="video-stats">3 views &#183; 5 months ago</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+            <div class="playlist-subtitle">The Hottest K-pop Videos You Shouldn't Miss Today</div>
+        </div>
+    </div>
 </body>
+
 </html>
