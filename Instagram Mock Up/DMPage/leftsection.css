@@ -1,0 +1,76 @@
+.left-section {
+    flex-basis: 30%;
+    border-right: 1px solid #dbdbdb;
+    overflow-y: auto;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px 0 20px;
+}
+
+/* 탑 섹션 */
+
+.top-section {
+    height: 100px;
+}
+
+.top-side {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.nickname {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #efefef;
+    border-radius: 20px;
+    padding: 0 12px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    margin: 0 16px 0 16px;
+}
+
+.search-icon {
+    flex: 1;
+}
+
+.search-bar {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+/* 탑 섹션 */
+
+/* 미들 섹션 */
+
+.middle-section {
+    height: 100px;
+}
+
+
+/* 미들 섹션 */
+
+.profile-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}

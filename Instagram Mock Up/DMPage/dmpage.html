@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Instagram・메시지</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="leftsection.css">
+    <link rel="stylesheet" href="rightsection.css">
 </head>
 <body>
-    
+    <nav class="sidebar">
+
+    </nav>
+    <main>
+        <div class="left-section">
+            <div class="left-container">
+                <div class="top-section"> <!-- 좌상단 -->
+                    <div class="top-side">
+                        <div class="nickname">Mingyu0804</div>
+                        <img class="new-message" src="../Icon/newmessageIcon.svg">
+                    </div>
+                    <div class="search-container">
+                        <div class="search-button">
+                            <img class="search-icon" src="../Icon/searchIcon.svg">
+                        </div>
+                        <input class="search-bar" type="text" placeholder="검색">
+                    </div>
+                </div>
+                <div class="middle-section">
+                    <section class="status-grid">
+                        <div class="status-container">
+                            <div class="status-message"></div>
+                            <div class="profile-elements">
+                                <img class="profile-icon" src="../Icon/profile.jpeg">
+                                <div>내 메모</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="bottom-section">
+                    <div class="top-side">
+                        <div>메시지</div>
+                        <div>요청</div>
+                    </div>
+                    <div class="bottom-side">
+                        <div class="left-side">
+                            <img class="profile-icon" src="../Icon/profile.jpeg">
+                        </div>
+                        <div class="right-side">
+                            <div class="nickname">Leo messi</div>
+                            <div class="recently-message">Hey, Friend !</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="mymessage-container">
+                <img class="message-icon" src="../Icon/message_big.svg">
+                <div class="title">내 메시지</div>
+                <div>친구나 그룹에 비공개 사진과 메시지를 보내보세요</div>
+                <button class="send-message">메시지 보내기</button>
+            </div>
+        </div>
+    </main> 
 </body>
 </html>
