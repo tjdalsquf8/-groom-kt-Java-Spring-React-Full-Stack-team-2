@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../SideBar/styles.css">
+    <link rel="stylesheet" href="../CreatePopUp/createpopup.css">
+    <script defer src="../SideBar/loadsidebar.js"></script>
+    <script defer src="../SideBar/sidebar.js"></script>
+    <script defer src="../CreatePopUp/createpopup.js"></script>
+
+    <title>Create PopUp</title>
 </head>
 <body>
-    
+    <div id="sidebar-container"></div>
+    <nav class="create-popup" id="create-popup">
+        <button class="create-popup-close-btn" id="create-popup-close-btn">&times;</button>
+        <div class="create-popup-main">
+            <div class="create-popup-header">
+                <p class="header-name">새 게시물 만들기</p>
+            </div>
+        <div class ="create-popup-content">
+            <div class="create-popup-image-section">
+                <input type="file" id="file-input" accept="image/*" style="display: none;">
+                <img id="image-preview" src="" alt="Preview" style="display: none;" position="absolute" class="image-preview">
+                <img src="../Icon/image.svg" alt="Image Upload Icon" class="image-upload-icon" id="image-upload-icon">
+            </div>
+            <div class="create-popup-instruction-section">
+                <p class="instruction-text" id="instruction-text">사진과 동영상을 여기에 끌어다 놓으세요</p>
+                <button class="select-from-computer-btn" id="select-from-computer-btn">컴퓨터에서 선택</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
