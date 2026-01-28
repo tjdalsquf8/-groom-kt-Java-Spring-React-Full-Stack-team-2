@@ -7,22 +7,23 @@
 .left-container {
     display: flex;
     flex-direction: column;
-    margin: 50px 20px 0 20px;
+    margin-top: 50px;
 }
 
 /* 탑 섹션 */
 
 .top-section {
     height: 100px;
+    margin: 0 10px 0 10px;
 }
 
-.top-side {
+.top-section .top-side {
     display: flex;
     justify-content: space-between;
-    margin-right: 10px;
+    margin: 0 10px 0 10px;
 }
 
-.nickname {
+.top-section .nickname {
     font-weight: bold;
     font-size: 20px;
     color: black;
@@ -64,13 +65,80 @@
 
 .middle-section {
     height: 100px;
+    margin: 30px 10px 0 10px;
 }
 
+.status-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 40px;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.profile-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.middle-section .profile-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
 
 /* 미들 섹션 */
 
-.profile-icon {
-    width: 60px;
-    height: 60px;
+/*바텀 섹션*/
+
+.bottom-section .top-side {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 20px;
+}
+
+.message {
+    font-weight: bold;
+    color: black;
+}
+
+.bottom-side {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.bottom-side:hover {
+    background-color: #ccc;
+}
+
+.left-side {
+    margin: 10px 10px 10px 0px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    font-size: 10px;
+}
+
+.bottom-section .nickname {
+    font-size: 16px;
+    color: black;
+}
+
+.recently-message {
+    font-size: 12px;
+}
+
+.bottom-section .profile-icon {
+    width: 50px;
+    height: 50px;
     border-radius: 30px;
 }
