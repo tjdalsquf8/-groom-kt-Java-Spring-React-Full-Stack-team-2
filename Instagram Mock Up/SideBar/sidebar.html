@@ -1,28 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <Link rel="stylesheet" href="../SideBar/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div className="main">
-        <div className="sidebar">
-            <div className="sidebar-header">
-                <h2 className="sidebar-title">Instagram</h2>
-                <button className="new-message-btn" aria-label="새로운 메시지">
-                    <!-- SVG 아이콘 삽입 -->
-                     <img src="../Icon/DBMessageIcon.svg">    
-                </button>
-            </div>
-            <nav className="sidebar-nav">
-                <ul className="nav-list">
-                    <li className="nav-item">홈</li>
-                    <li className="nav-item">검색</li>
-                    <li className="nav-item">릴스</li>
-                    <li className="nav-item">쇼핑</li>
-                    <li className="nav-item">내 프로필</li>
-    </div>
+    <!-- Instagram Left Sidebar -->
+    <aside class="ig-sidebar" id="igSidebar">
+        <div class="ig-sidebar__top">
+            <a class="ig-nav-item ig-nav-item--logo" href="#" aria-label="Instagram">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/logo.svg" alt="" />
+                </span>
+            </a>
+        </div>
+
+        <nav class="ig-sidebar__nav" aria-label="Primary">
+            <a class="ig-nav-item is-active" href="../MainPage/mainpage.html">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/home.svg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">홈</span>
+            </a>
+
+            <a class="ig-nav-item" href="../ReelsPage/reelspage.html">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/reels.svg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">릴스</span>
+            </a>
+
+            <a class="ig-nav-item" href="../DMPage/dmpage.html">
+                <span class="ig-nav-item__icon ig-nav-item__icon--badge">
+                    <img src="../Icon/message.svg" alt="" />
+                    <span class="ig-badge" aria-label="unread count">4</span>
+                </span>
+                <span class="ig-nav-item__label">메시지</span>
+            </a>
+
+            <a class="ig-nav-item" href="../Modal/UserSearchModal/">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/search.svg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">검색</span>
+            </a>
+
+            <a class="ig-nav-item" href="../SearchPage(Reels)/searchpage.html">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/explore.svg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">탐색 탭</span>
+            </a>
+
+            <a class="ig-nav-item" href="../Modal/AlermModal/alermmodal.html">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/alert.svg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">알림</span>
+            </a>
+
+            <a class="ig-nav-item" href="../CreatePopUp/createpopup.html">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/plus.svg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">만들기</span>
+            </a>
+
+            <a class="ig-nav-item" href="../MyProfile/myprofilepage.html">
+                <span class="ig-nav-item__icon">
+                    <img src="../Icon/profile.jpeg" alt="" />
+                </span>
+                <span class="ig-nav-item__label">프로필</span>
+            </a>
+        </nav>
+
+        <a class="ig-nav-item ig-more-btn" type="button" id="moreBtn">
+            <span class="ig-nav-item__icon">
+                <img src="../Icon/settings.svg" alt="" />
+            </span>
+            <span class="ig-nav-item__label">더 보기</span>
+        </a>
+        <div class="ig-more-popover" id="morePopover">
+            <ul class="ig-more-list">
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/option.svg" alt="" />
+                        </span>
+                        <span class="ig-more-text">설정</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/active.svg" alt="" />
+                        </span>
+                        <span class="ig-more-text">내 활동</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/save.svg" alt="" />
+                        </span>
+                        <span class="ig-more-text">저장됨</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/change_mode.svg" alt="" />
+                        </span>
+                        <span class="ig-more-text">모드 전환</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/problem.svg" alt="" />
+                        </span>
+                        <span class="ig-more-text">문제 신고</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="ig-more-divider"></div>
+
+            <ul class="ig-more-list">
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-text">계정 전환</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="ig-more-item danger">
+                        <span class="ig-more-text">로그아웃</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <a class="ig-nav-item ig-meta-btn" type="button" id="metaBtn">
+            <span class="ig-nav-item__icon">
+                <img src="../Icon/others.svg" alt="" />
+            </span>
+            <span class="ig-nav-item__label">Meta의 다른 앱</span>
+        </a>
+
+        <div class="ig-meta-popover" id="metaPopover">
+            <ul class="ig-more-list">
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/whatsapp.svg" alt="" />
+                        </span>
+                        <span class="ig-more-text">WhatsApp</span>
+                    </button>
+                </li>
+
+                <li>
+                    <button type="button" class="ig-more-item">
+                        <span class="ig-more-icon">
+                            <img src="../Icon/threads.svg" alt="" />
+                            <span class="ig-badge small">9+</span>
+                        </span>
+                        <span class="ig-more-text">Threads</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </aside>
 </body>
 </html>
