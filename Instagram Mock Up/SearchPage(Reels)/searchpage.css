@@ -1,0 +1,52 @@
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    display: flex;
+    font-family: Roboto, Arial;
+    margin: 0;
+    background-color: white;
+    color: gray;
+}
+
+.feedgrid {
+    display: grid;
+    row-gap: 1px;
+    column-gap: 2px;
+    margin: 50px 0 0 380px;
+}
+
+@media (min-width: 1000px) {
+    .feedgrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.feed {
+    position: relative;
+    flex: 1;
+}
+
+.feed:hover .thumbnails {
+    opacity: 0.8;
+}
+
+.feed:hover {
+    background-color: #170606;
+}
+
+.thumbnails {
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.video-icon,
+.novideo-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
