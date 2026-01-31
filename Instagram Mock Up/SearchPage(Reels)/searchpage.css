@@ -27,6 +27,8 @@ body {
 .feed {
     position: relative;
     flex: 1;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .feed:hover .thumbnails {
@@ -34,7 +36,33 @@ body {
 }
 
 .feed:hover {
-    background-color: #170606;
+    background-color: #050000;
+}
+
+.feed-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.feed:hover .feed-overlay {
+    opacity: 1;
+}
+
+.overlay-info span {
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .thumbnails {
