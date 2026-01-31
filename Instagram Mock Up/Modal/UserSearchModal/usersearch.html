@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <base href="../">
+    <link rel="stylesheet" href="../SideBar/styles.css">
+    <link rel="stylesheet" href="../Modal/UserSearchModal/usersearch.css">
+    <script defer src="../SideBar/loadsidebar.js"></script>
+    <script defer src="../SideBar/sidebar.js"></script>
+    <script defer src="../Modal/UserSearchModal/usersearch.js"></script>
+    <title>UserSearchModal</title>
 </head>
 <body>
+    <div id="sidebar-container"></div>
+    <nav class="user-search-modal" id="user-search-modal">
+        <button class="user-search-close-btn" id="user-search-close-btn">&times;</button>
+        <h3>검색</h3>
+        <div class="search-box" id="search-box">
+            <input type="text" placeholder="검색" class="user-search-input" id="user-search-input">
+            <button class="user-search-clear-btn" id="user-search-clear-btn">&times;</button>
+        </div>
+        <div class="user-search-result" id="user-search-result">
+        <div class="user-search-noresult" id="user-search-noresult">
+            </div>
+            <div class="user-search-recent" id="user-search-recent">
+        <p class="user-search-list" id="user-search-list">최근 검색 항목</p>
+        <p class="user-search-p" id="user-search-p">최근 검색 내역 없음.</p>
+        <ul class="user-search-separator" id="user-search-separator">
+            <li class="user-search-ls">
+                <button class="user-search-ls-btn">
+                    <img class="user-search-img" src="../../Icon/profile.jpeg" alt="프로필 사진">
+                    <div class="user-search-information">
+                    <span class="user-search-username">Nickname</span>
+                    <span class="user-search-stat">닉네임 &#8226; Nickname님 외 33명이 팔로우합니다</span>
+                    </div>
+                </button>
+            </li>
+            <li class="user-search-ls">
+                <button class="user-search-ls-btn">
+                    <img class="user-search-img" src="../../Icon/profile.jpeg" alt="프로필 사진">
+                    <div class="user-search-information">
+                    <span class="user-search-username">Nickname</span>
+                    <span class="user-search-stat">닉네임 &#8226; Nickname님이 팔로우합니다</span>
+                    </div>
+                </button>
+            </li>
+
+
+        </ul>
+        </div>
+        </div>
+        
+    </nav>
     
 </body>
 </html>
