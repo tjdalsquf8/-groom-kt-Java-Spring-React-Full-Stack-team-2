@@ -9,7 +9,6 @@ const UserSearchLsBtn = document.getElementsByClassName('user-search-ls-btn');
 const UserSearchRecent = document.getElementById('user-search-recent');
 const UserSearchNoResult = document.getElementById('user-search-noresult');
 const UserSearchBox = document.getElementById('search-box');
-
 // 검색 모달 닫기
 UserSearchCloseBtn.onclick = function() {
     UserSearchModal.style.display = 'none';
@@ -105,5 +104,12 @@ document.addEventListener('click', function(event) {
             UserSearchClearBtn.style.display = 'none';
             UserSearchBox.style.marginBottom = '0px';
         }
+    }
+});
+
+document.addEventListener('click', function(event) {
+    const UserBtn = event.target.closest('.user-search-ls-btn');
+    if(UserBtn){
+        window.location.href = '../../MyProfile/myprofilepage.html';
     }
 });
