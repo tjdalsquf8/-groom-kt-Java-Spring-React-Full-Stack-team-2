@@ -74,4 +74,44 @@ function initSidebar() {
     morePopover.classList.remove("active");
     metaPopover.classList.remove("active");
   });
+
+
+
+  // 모달 토글 코드
+  const sidebarAlarm = document.querySelector('.nav-alarm');
+  const closeModal = document.querySelector('#alarm-modal-close');
+  const alarmModal = document.querySelector('#alarm-modal');
+  sidebarAlarm.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    alarmModal.classList.add('show');
+    alarmModal.scrollTop = 0;
+  })
+  closeModal.addEventListener('click', () => {
+    alarmModal.classList.remove('show');
+  })
+  // 모달 밖 클릭 시 닫힘
+  document.addEventListener('click', (e) => {
+    if (
+      alarmModal.classList.contains('show') &&
+      !alarmModal.contains(e.target)
+    ) {
+      alarmModal.classList.remove('show');
+    }
+  });
+  // 모달 ESC 닫기
+  document.addEventListener(
+    'keydown',
+    (e) => {
+      if (e.key !== 'Escape') return;
+  
+      if (!alarmModal.classList.contains('show')) return;
+  
+      e.preventDefault();
+      e.stopPropagation();
+  
+      alarmModal.classList.remove('show');
+    },
+    true
+  );
 }
