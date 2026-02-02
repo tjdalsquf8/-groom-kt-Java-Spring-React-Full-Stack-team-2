@@ -1,11 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | Instagram</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../SideBar/styles.css" />
 </head>
+
 <body>
-    
+  <div id="sidebar-container"></div>
+
+  <main class="page-with-sidebar">
+    <section class="profile-wrap">
+
+      <!-- 상단 프로필 -->
+      <div class="profile-header">
+        <div class="avatar-wrap">
+          <div class="avatar-area">
+            <div class="avatar">
+              <img src="../Icon/profile.jpeg" alt="프로필" />
+            </div>
+
+            <div class="avatar-badge" aria-hidden="true">
+              <img src="images/camera.png" alt="" />
+            </div>
+
+            <div class="avatar-bubble">메모...</div>
+          </div>
+
+          <div class="profile-actions">
+            <button class="profile-btn" type="button">프로필 편집</button>
+            <button class="profile-btn" type="button">보관된 스토리 보기</button>
+          </div>
+        </div>
+
+        <div class="profile-info">
+          <div class="profile-top-row">
+            <h2 class="username">dandan277</h2>
+            <button class="icon-gear" aria-label="설정" type="button">
+              <img src="../Icon/option.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="counts">
+            <span><b>게시물</b> 0</span>
+            <span><b>팔로워</b> 8</span>
+            <span><b>팔로우</b> 10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 하이라이트 -->
+      <div class="highlights">
+        <button class="highlight-item" type="button">
+          <span class="highlight-circle">
+            <span class="highlight-plus">+</span>
+          </span>
+          <span class="highlight-label">신규</span>
+        </button>
+      </div>
+
+      <!-- 탭들 -->
+      <div class="tabs">
+        <button class="tab active" type="button" aria-label="게시물">
+          <img src="../Icon/viewbox.svg" alt="" />
+        </button>
+        <button class="tab" type="button" aria-label="저장됨">
+          <img src="../Icon/save.svg" alt="" />
+        </button>
+        <button class="tab" type="button" aria-label="태그됨">
+          <img src="../Icon/tagged.svg" alt="" />
+        </button>
+      </div>
+
+      <!-- 빈 상태 -->
+      <div class="empty-state">
+        <div class="empty-icon">
+          <img src="images/camera2.png" alt="" />
+        </div>
+        <h3>사진 공유</h3>
+        <p>사진을 공유하면 회원님의 프로필에 표시됩니다.</p>
+        <a class="empty-link" href="#">첫 사진 공유하기</a>
+      </div>
+
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#">Meta</a>
+          <a href="#">소개</a>
+          <a href="#">블로그</a>
+          <a href="#">채용 정보</a>
+          <a href="#">도움말</a>
+          <a href="#">API</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">약관</a>
+          <a href="#">위치</a>
+          <a href="#">Instagram Lite</a>
+          <a href="#">Meta AI</a>
+          <a href="#">Threads</a>
+          <a href="#">연락처 업로드 & 비사용자</a>
+          <a href="#">Meta Verified</a>
+        </div>
+
+        <div class="footer-meta">
+          <span>한국어 ▾</span>
+          <span>© 2026 Instagram from Meta</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="../SideBar/sidebar.js"></script>
+  <script src="../SideBar/loadsidebar.js"></script>
 </body>
 </html>

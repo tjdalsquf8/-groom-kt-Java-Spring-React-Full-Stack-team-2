@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reels | Instagram</title>
+
+  <link rel="stylesheet" href="../SideBar/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    
+  <div id="sidebar-container"></div>
+  <main class="page-with-sidebar">
+    <section class="reels-page">
+      <!-- 가운데 릴스 부분 -->
+      <div class="reels-stage">
+        <!-- 썸네일 부분 클릭하면 릴스 링크로 이동 -->
+        <a
+          class="reel-media"
+          href="https://www.instagram.com/reel/DReyx7WD4HV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener"
+          aria-label="릴스 열기"
+        >
+          <!-- 썸네일 -->
+          <img class="reel-thumb" src="images/reels-thumb1.jpg" alt="릴스 썸네일" />
+          <!-- 가짜 재생 버튼 -->
+          <span class="reel-play" aria-hidden="true"></span>
+          <div class="reel-bottom">
+            <div class="reel-user">
+              <img class="reel-avatar" src="images/le-logo.jpg" alt="" aria-hidden="true" />
+              <span class="reel-username">le_sserafim</span>
+              <span class="reel-follow">팔로우</span>
+            </div>
+
+            <p class="reel-caption">Eat it up w/ #ILLIT #WONHEE 🍝💝 … 더 보기</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 오른쪽 부분 -->
+      <aside class="reels-actions" aria-label="릴스 액션">
+        <button class="action-btn" type="button" aria-label="좋아요">
+          <img src="../Icon/alert.svg" alt="" />
+        </button>
+        <div class="action-count">103.1만</div>
+
+        <button class="action-btn" type="button" aria-label="댓글">
+          <img src="../Icon/comment.svg" alt="" />
+        </button>
+        <div class="action-count">2167</div>
+
+        <button class="action-btn" type="button" aria-label="공유">
+          <img src="../Icon/message.svg" alt="" />
+        </button>
+
+        <button class="action-btn" type="button" aria-label="저장">
+          <img src="../Icon/save.svg" alt="" />
+        </button>
+
+        <button class="action-btn" type="button" aria-label="더보기">
+          <img src="../Icon/more.svg" alt="" />
+        </button>
+      </aside>
+
+      <!-- 맨 오른쪽 화살표 2개 -->
+      <div class="reels-nav" aria-label="릴스 이동">
+        <button class="nav-btn" type="button" aria-label="위로">
+          <img src="../Icon/arrow_up.svg" alt="" />
+        </button>
+        <button class="nav-btn" type="button" aria-label="아래로">
+          <img src="../Icon/arrow_down.svg" alt="" />
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="../SideBar/sidebar.js"></script>
+  <script src="../SideBar/loadsidebar.js"></script>
 </body>
 </html>

@@ -1,0 +1,395 @@
+body {
+  margin: 0;
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #262626;
+}
+
+main {
+  margin-left: 240px; 
+  padding: 24px;
+}
+
+/*  스토리 부분  */
+.stories {
+  width: 100%;
+  max-width: 630px;
+  margin: 0;
+  padding-left: 24px;  
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.stories__inner {
+  display: flex;
+  gap: 35px;
+  overflow-x: auto;
+  padding: 0 8px;
+}
+
+.stories__inner::-webkit-scrollbar { display: none; }
+.stories__inner { -ms-overflow-style: none; scrollbar-width: none; }
+
+.story {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  width: 74px;
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.story__ring {
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  background: #dbdbdb;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+}
+
+.story__ring-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: #fff;
+  padding: 2px;
+  display: grid;
+  place-items: center;
+}
+
+.story__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+.story__name {
+  font-size: 12px;
+  line-height: 14px;
+  color: #262626;
+
+  max-width: 74px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*  인스타 피드 부분  */
+.feed {
+  width: 100%;
+  max-width: 520px;      
+  margin: 0;
+  padding-left: 24px;    
+  padding-top: 8px;
+}
+
+.post {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* 헤더 */
+.post__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.post__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.post__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+.post__user {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.post__user-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.post__time,
+.post__dot {
+  font-weight: 400;
+  color: #8e8e8e;
+}
+
+.post__location {
+  font-size: 12px;
+  color: #262626;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post__more {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 6px 8px;
+  line-height: 1;
+}
+
+/* 미디어 */
+.post__media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.post__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 6px;
+}
+
+.post__actions-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;             
+}
+
+/* 아이콘 숫자 묶은 부분*/
+.post__action-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.post__icon {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+}
+
+.post__icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.post__count {
+  font-size: 13px;
+  color: #262626;
+  line-height: 1;
+}
+
+/* body */
+.post__body {
+  padding: 0 14px 14px;
+}
+
+/* caption */
+.post__caption {
+  font-size: 14px;
+  line-height: 18px;
+  color: #262626;
+}
+
+.post__caption-user {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.post__caption-full {
+  display: none;           
+  white-space: pre-wrap;
+}
+
+/* 더보기 버튼 */
+.post__toggle {
+  border: 0;
+  background: transparent;
+  color: #8e8e8e;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+/* 펼쳐진 상태 */
+.post__caption[data-collapsed="false"] .post__caption-preview {
+  display: none;
+}
+.post__caption[data-collapsed="false"] .post__caption-full {
+  display: block;
+}
+
+/* 해시태그 */
+.hashtag {
+  color: #0000cc;
+  font-weight: 600;
+}
+
+
+.recommend {
+  position: sticky;
+  top: 24px;
+  margin-left: 40px;
+  width: 300px;
+  font-size: 14px;
+}
+
+/* 내 프로필 */
+.recommend__me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.recommend__me-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recommend__me img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.recommend__username {
+  font-weight: 600;
+}
+
+.recommend__name {
+  color: #8e8e8e;
+  font-size: 13px;
+}
+
+.recommend__switch {
+  border: 0;
+  background: none;
+  color: #0000cc;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recommend__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.recommend__header button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* 리스트 */
+.recommend__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recommend__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.recommend__left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.recommend__left img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.recommend__id {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.recommend__desc {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.recommend__follow {
+  border: 0;
+  background: none;
+  color: #0000cc;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 푸터 */
+.recommend__footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #8e8e8e;
+  line-height: 1.6;
+}
+
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;           
+}
+
+.feed {
+  flex: 0 0 auto;
+}
+
+.recommend{
+  flex: 0 0 300px;
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+
+ transform: translate(100px, -100px);
+
+}
